@@ -1,0 +1,139 @@
+﻿<Page
+    x:Class="YaMoSignalTools.Pages.SignalTransferPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:hc="https://handyorg.github.io/handycontrol"
+    xmlns:local="clr-namespace:YaMoSignalTools.Pages"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="SignalTransferPage"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+
+    <Border Background="Transparent" BorderThickness="0">
+        <hc:TransitioningContentControl>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+
+                <!--  顶部图表区  -->
+                <TabControl Grid.Row="0" Style="{StaticResource TabControlInLine}">
+                    <TabItem Header="时域">
+                        <Border Background="{DynamicResource PrimaryBrush}">
+                            <TextBlock Foreground="{DynamicResource TextIconBrush}" Style="{StaticResource TextBlockLargeBold}">
+                                <Run Text="时域" />
+                                <Run Text="1" />
+                            </TextBlock>
+                        </Border>
+                    </TabItem>
+                    <TabItem Header="频域">
+                        <Border Background="{DynamicResource SuccessBrush}">
+                            <TextBlock Foreground="{DynamicResource TextIconBrush}" Style="{StaticResource TextBlockLargeBold}">
+                                <Run Text="频域" />
+                                <Run Text="2" />
+                            </TextBlock>
+                        </Border>
+                    </TabItem>
+                    <TabItem Header="相位">
+                        <Border Background="{DynamicResource InfoBrush}">
+                            <TextBlock Foreground="{DynamicResource TextIconBrush}" Style="{StaticResource TextBlockLargeBold}">
+                                <Run Text="相位" />
+                                <Run Text="3" />
+                            </TextBlock>
+                        </Border>
+                    </TabItem>
+                </TabControl>
+
+                <!--  功能配置区  -->
+                <Grid Grid.Row="1" Margin="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="auto" />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0" Orientation="Vertical">
+                        <TextBlock
+                            HorizontalAlignment="Left"
+                            FontSize="15"
+                            Text="参数配置" />
+                    </StackPanel>
+                    <StackPanel
+                        Grid.Column="1"
+                        MinWidth="150"
+                        Orientation="Vertical">
+                        <TextBlock
+                            HorizontalAlignment="Left"
+                            FontSize="15"
+                            Text="结果信息" />
+                    </StackPanel>
+                </Grid>
+                <!--  底部工具栏  -->
+                <Border
+                    Grid.Row="2"
+                    Margin="10,5,10,5"
+                    CornerRadius="5"
+                    Effect="{StaticResource EffectShadow5}"
+                    Style="{StaticResource BorderRegion}">
+
+                    <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+                        <Button
+                            MinWidth="50"
+                            MinHeight="35"
+                            Margin="0,0,10,0"
+                            hc:Poptip.Content="导入参数"
+                            hc:Poptip.Placement="TopLeft"
+                            Style="{StaticResource ButtonDashed}">
+                            <TextBlock
+                                HorizontalAlignment="Center"
+                                FontFamily="/Resource/Icon/#iconfont"
+                                FontSize="20"
+                                Text="&#xe64b;" />
+                        </Button>
+                        <Button
+                            MinWidth="50"
+                            MinHeight="35"
+                            Margin="10,0,10,0"
+                            hc:Poptip.Content="导出参数"
+                            hc:Poptip.Placement="TopLeft"
+                            Style="{StaticResource ButtonDashed}">
+                            <TextBlock
+                                HorizontalAlignment="Center"
+                                FontFamily="/Resource/Icon/#iconfont"
+                                FontSize="20"
+                                Text="&#xe656;" />
+                        </Button>
+                        <Button
+                            MinWidth="50"
+                            MinHeight="35"
+                            Margin="10,0,10,0"
+                            hc:Poptip.Content="导入数据"
+                            hc:Poptip.Placement="TopLeft"
+                            Style="{StaticResource ButtonDashed}">
+                            <TextBlock
+                                HorizontalAlignment="Center"
+                                FontFamily="/Resource/Icon/#iconfont"
+                                FontSize="20"
+                                Text="&#xe604;" />
+                        </Button>
+                        <Button
+                            MinWidth="50"
+                            MinHeight="35"
+                            Margin="10,0,10,0"
+                            hc:Poptip.Content="导出数据"
+                            hc:Poptip.Placement="TopLeft"
+                            Style="{StaticResource ButtonDashed}">
+                            <TextBlock
+                                HorizontalAlignment="Center"
+                                FontFamily="/Resource/Icon/#iconfont"
+                                FontSize="20"
+                                Text="&#xe604;" />
+                        </Button>
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </hc:TransitioningContentControl>
+    </Border>
+</Page>

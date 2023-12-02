@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YaMoSignalTools", "YaMoSignalTools\YaMoSignalTools.csproj", "{EEB171DC-6700-4478-8358-5499ED1CD471}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EEB171DC-6700-4478-8358-5499ED1CD471}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEB171DC-6700-4478-8358-5499ED1CD471}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEB171DC-6700-4478-8358-5499ED1CD471}.Debug|x64.ActiveCfg = Debug|x64
+		{EEB171DC-6700-4478-8358-5499ED1CD471}.Debug|x64.Build.0 = Debug|x64
+		{EEB171DC-6700-4478-8358-5499ED1CD471}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEB171DC-6700-4478-8358-5499ED1CD471}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEB171DC-6700-4478-8358-5499ED1CD471}.Release|x64.ActiveCfg = Release|x64
+		{EEB171DC-6700-4478-8358-5499ED1CD471}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4ED3187B-B6CD-4BE4-B10D-3339966D9478}
+	EndGlobalSection
+EndGlobal
