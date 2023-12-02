@@ -11,185 +11,183 @@
     d:DesignHeight="450"
     d:DesignWidth="800"
     mc:Ignorable="d">
-    <Border Background="Transparent" BorderThickness="0">
-        <hc:TransitioningContentControl>
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition Height="auto" />
-                </Grid.RowDefinitions>
+    <hc:TransitioningContentControl>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
 
-                <!--  顶部图表区  -->
-                <TabControl Grid.Row="0" Style="{StaticResource TabControlInLine}">
-                    <TabItem Header="时域">
-                        <Border Background="{DynamicResource PrimaryBrush}">
-                            <ScottPlot:WpfPlot x:Name="WpfPlot1" />
-                            <!--<TextBlock Foreground="{DynamicResource TextIconBrush}" Style="{StaticResource TextBlockLargeBold}">
+            <!--  顶部图表区  -->
+            <TabControl Grid.Row="0" Style="{StaticResource TabControlInLine}">
+                <TabItem Header="时域">
+                    <Border Background="{DynamicResource PrimaryBrush}">
+                        <ScottPlot:WpfPlot x:Name="WpfPlot1" />
+                        <!--<TextBlock Foreground="{DynamicResource TextIconBrush}" Style="{StaticResource TextBlockLargeBold}">
                                 <Run Text="时域" />
                                 <Run Text="1" />
                             </TextBlock>-->
-                        </Border>
-                    </TabItem>
-                    <TabItem Header="频域">
-                        <Border Background="{DynamicResource SuccessBrush}">
-                            <ScottPlot:WpfPlot x:Name="WpfPlot2" />
-                        </Border>
-                    </TabItem>
-                    <TabItem Header="相位">
-                        <Border Background="{DynamicResource InfoBrush}">
-                            <ScottPlot:WpfPlot x:Name="WpfPlot3" />
-                        </Border>
-                    </TabItem>
-                </TabControl>
+                    </Border>
+                </TabItem>
+                <TabItem Header="频域">
+                    <Border Background="{DynamicResource SuccessBrush}">
+                        <ScottPlot:WpfPlot x:Name="WpfPlot2" />
+                    </Border>
+                </TabItem>
+                <TabItem Header="相位">
+                    <Border Background="{DynamicResource InfoBrush}">
+                        <ScottPlot:WpfPlot x:Name="WpfPlot3" />
+                    </Border>
+                </TabItem>
+            </TabControl>
 
-                <!--  功能配置区  -->
-                <Grid Grid.Row="1" Margin="10">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition />
-                        <ColumnDefinition Width="auto" />
-                        <ColumnDefinition Width="auto" />
-                    </Grid.ColumnDefinitions>
-                    <!--  参数设置  -->
-                    <Grid Grid.Column="0">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="auto" />
-                            <RowDefinition Height="auto" />
-                            <RowDefinition />
-                        </Grid.RowDefinitions>
-                        <TextBlock
-                            Grid.Row="0"
-                            HorizontalAlignment="Left"
-                            FontSize="15"
-                            Text="参数配置" />
-                        <StackPanel
-                            Grid.Row="1"
-                            Margin="0,10,0,0"
-                            Orientation="Horizontal">
-                            <hc:ComboBox
-                                x:Name="test1"
-                                Width="200"
-                                hc:InfoElement.Title="信号类型"
-                                hc:InfoElement.TitlePlacement="Top"
-                                hc:InfoElement.TitleWidth="140"
-                                ItemsSource="{Binding DataList}"
-                                SelectedIndex="0" />
-                            <hc:ComboBox
-                                x:Name="test2"
-                                Width="200"
-                                Margin="10,0,0,0"
-                                hc:InfoElement.Title="具体信号生成器"
-                                hc:InfoElement.TitlePlacement="Top"
-                                hc:InfoElement.TitleWidth="140"
-                                ItemsSource="{Binding DataList}"
-                                SelectedIndex="0" />
-                        </StackPanel>
-                        <Border Grid.Row="2" BorderThickness="0">
-                            <ContentControl x:Name="SignalParamPresenter" Margin="0,5,0,0" />
-                        </Border>
-                    </Grid>
-
+            <!--  功能配置区  -->
+            <Grid Grid.Row="1" Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+                <!--  参数设置  -->
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <TextBlock
+                        Grid.Row="0"
+                        HorizontalAlignment="Left"
+                        FontSize="15"
+                        Text="参数配置" />
                     <StackPanel
-                        Grid.Column="1"
-                        MinWidth="150"
-                        Orientation="Vertical">
-                        <TextBlock
-                            HorizontalAlignment="Left"
-                            FontSize="15"
-                            Text="操作" />
+                        Grid.Row="1"
+                        Margin="0,10,0,0"
+                        Orientation="Horizontal">
+                        <hc:ComboBox
+                            x:Name="test1"
+                            Width="200"
+                            hc:InfoElement.Title="信号类型"
+                            hc:InfoElement.TitlePlacement="Top"
+                            hc:InfoElement.TitleWidth="140"
+                            ItemsSource="{Binding DataList}"
+                            SelectedIndex="0" />
+                        <hc:ComboBox
+                            x:Name="test2"
+                            Width="200"
+                            Margin="10,0,0,0"
+                            hc:InfoElement.Title="具体信号生成器"
+                            hc:InfoElement.TitlePlacement="Top"
+                            hc:InfoElement.TitleWidth="140"
+                            ItemsSource="{Binding DataList}"
+                            SelectedIndex="0" />
                     </StackPanel>
-                    <StackPanel
-                        Grid.Column="2"
-                        MinWidth="150"
-                        Orientation="Vertical">
-                        <TextBlock
-                            HorizontalAlignment="Left"
-                            FontSize="15"
-                            Text="结果信息" />
-                    </StackPanel>
+                    <Border Grid.Row="2" BorderThickness="0">
+                        <ContentControl x:Name="SignalParamPresenter" Margin="0,5,0,0" />
+                    </Border>
                 </Grid>
-                <!--  底部工具栏  -->
-                <Border
-                    Grid.Row="2"
-                    Margin="10,5,10,5"
-                    CornerRadius="5"
-                    Effect="{StaticResource EffectShadow5}"
-                    Style="{StaticResource BorderRegion}">
 
-                    <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
-                        <Button
-                            MinWidth="50"
-                            MinHeight="35"
-                            Margin="0,0,10,0"
-                            Style="{StaticResource ButtonDashed}"
-                            ToolTip="导入参数"
-                            ToolTipService.InitialShowDelay="1"
-                            ToolTipService.Placement="Top">
-                            <TextBlock
-                                HorizontalAlignment="Center"
-                                FontFamily="/Resource/Icon/#iconfont"
-                                FontSize="20"
-                                Text="&#xe8c7;" />
-                        </Button>
-                        <Button
-                            MinWidth="50"
-                            MinHeight="35"
-                            Margin="10,0,10,0"
-                            Style="{StaticResource ButtonDashed}"
-                            ToolTip="导出参数"
-                            ToolTipService.InitialShowDelay="1"
-                            ToolTipService.Placement="Top">
-                            <TextBlock
-                                HorizontalAlignment="Center"
-                                FontFamily="/Resource/Icon/#iconfont"
-                                FontSize="20"
-                                Text="&#xe8c6;" />
-                        </Button>
-                        <Button
-                            MinWidth="50"
-                            MinHeight="35"
-                            Margin="10,0,10,0"
-                            Style="{StaticResource ButtonDashed}"
-                            ToolTip="Excel数据"
-                            ToolTipService.InitialShowDelay="1"
-                            ToolTipService.Placement="Top">
-                            <TextBlock
-                                HorizontalAlignment="Center"
-                                FontFamily="/Resource/Icon/#iconfont"
-                                FontSize="20"
-                                Text="&#xe609;" />
-                        </Button>
-                        <Button
-                            MinWidth="50"
-                            MinHeight="35"
-                            Margin="10,0,10,0"
-                            Style="{StaticResource ButtonDashed}"
-                            ToolTip="CSV数据"
-                            ToolTipService.InitialShowDelay="1"
-                            ToolTipService.Placement="Top">
-                            <TextBlock
-                                HorizontalAlignment="Center"
-                                FontFamily="/Resource/Icon/#iconfont"
-                                FontSize="20"
-                                Text="&#xe6e0;" />
-                        </Button>
-                        <Button
-                            MinWidth="50"
-                            MinHeight="35"
-                            Margin="10,0,10,0"
-                            Style="{StaticResource ButtonDashed}"
-                            ToolTip="MatLab数据"
-                            ToolTipService.InitialShowDelay="1"
-                            ToolTipService.Placement="Top">
-                            <TextBlock
-                                HorizontalAlignment="Center"
-                                FontFamily="/Resource/Icon/#iconfont"
-                                FontSize="20"
-                                Text="&#xe674;" />
-                        </Button>
-                    </StackPanel>
-                </Border>
+                <StackPanel
+                    Grid.Column="1"
+                    MinWidth="150"
+                    Orientation="Vertical">
+                    <TextBlock
+                        HorizontalAlignment="Left"
+                        FontSize="15"
+                        Text="操作" />
+                </StackPanel>
+                <StackPanel
+                    Grid.Column="2"
+                    MinWidth="150"
+                    Orientation="Vertical">
+                    <TextBlock
+                        HorizontalAlignment="Left"
+                        FontSize="15"
+                        Text="结果信息" />
+                </StackPanel>
             </Grid>
-        </hc:TransitioningContentControl>
-    </Border>
+            <!--  底部工具栏  -->
+            <Border
+                Grid.Row="2"
+                Margin="10,5,10,5"
+                CornerRadius="5"
+                Effect="{StaticResource EffectShadow5}"
+                Style="{StaticResource BorderRegion}">
+
+                <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+                    <Button
+                        MinWidth="50"
+                        MinHeight="35"
+                        Margin="0,0,10,0"
+                        Style="{StaticResource ButtonDashed}"
+                        ToolTip="导入参数"
+                        ToolTipService.InitialShowDelay="1"
+                        ToolTipService.Placement="Top">
+                        <TextBlock
+                            HorizontalAlignment="Center"
+                            FontFamily="/Resource/Icon/#iconfont"
+                            FontSize="20"
+                            Text="&#xe8c7;" />
+                    </Button>
+                    <Button
+                        MinWidth="50"
+                        MinHeight="35"
+                        Margin="10,0,10,0"
+                        Style="{StaticResource ButtonDashed}"
+                        ToolTip="导出参数"
+                        ToolTipService.InitialShowDelay="1"
+                        ToolTipService.Placement="Top">
+                        <TextBlock
+                            HorizontalAlignment="Center"
+                            FontFamily="/Resource/Icon/#iconfont"
+                            FontSize="20"
+                            Text="&#xe8c6;" />
+                    </Button>
+                    <Button
+                        MinWidth="50"
+                        MinHeight="35"
+                        Margin="10,0,10,0"
+                        Style="{StaticResource ButtonDashed}"
+                        ToolTip="Excel数据"
+                        ToolTipService.InitialShowDelay="1"
+                        ToolTipService.Placement="Top">
+                        <TextBlock
+                            HorizontalAlignment="Center"
+                            FontFamily="/Resource/Icon/#iconfont"
+                            FontSize="20"
+                            Text="&#xe609;" />
+                    </Button>
+                    <Button
+                        MinWidth="50"
+                        MinHeight="35"
+                        Margin="10,0,10,0"
+                        Style="{StaticResource ButtonDashed}"
+                        ToolTip="CSV数据"
+                        ToolTipService.InitialShowDelay="1"
+                        ToolTipService.Placement="Top">
+                        <TextBlock
+                            HorizontalAlignment="Center"
+                            FontFamily="/Resource/Icon/#iconfont"
+                            FontSize="20"
+                            Text="&#xe6e0;" />
+                    </Button>
+                    <Button
+                        MinWidth="50"
+                        MinHeight="35"
+                        Margin="10,0,10,0"
+                        Style="{StaticResource ButtonDashed}"
+                        ToolTip="MatLab数据"
+                        ToolTipService.InitialShowDelay="1"
+                        ToolTipService.Placement="Top">
+                        <TextBlock
+                            HorizontalAlignment="Center"
+                            FontFamily="/Resource/Icon/#iconfont"
+                            FontSize="20"
+                            Text="&#xe674;" />
+                    </Button>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </hc:TransitioningContentControl>
 </Page>
