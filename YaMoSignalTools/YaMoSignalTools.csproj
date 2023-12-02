@@ -102,6 +102,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\MiscSignalParamPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\NoiseSignalParamPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PeriodSignalParamPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\SignalFilterPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -157,6 +169,15 @@
     </Compile>
     <Compile Include="Pages\IndexPage.xaml.cs">
       <DependentUpon>IndexPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MiscSignalParamPage.xaml.cs">
+      <DependentUpon>MiscSignalParamPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\NoiseSignalParamPage.xaml.cs">
+      <DependentUpon>NoiseSignalParamPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PeriodSignalParamPage.xaml.cs">
+      <DependentUpon>PeriodSignalParamPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\SignalFilterPage.xaml.cs">
       <DependentUpon>SignalFilterPage.xaml</DependentUpon>
