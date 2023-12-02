@@ -11,14 +11,7 @@
     Background="{x:Null}"
     mc:Ignorable="d">
 
-    <Border
-        BorderThickness="0"
-        Effect="{StaticResource EffectShadow1}"
-        Style="{StaticResource BorderRegion}">
-        <TextBlock
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            FontSize="20"
-            Text="123" />
+    <Border Background="White" BorderThickness="0">
+        <TextBlock Text="123" />
     </Border>
 </Page>
