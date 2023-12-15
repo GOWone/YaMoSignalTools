@@ -77,62 +77,102 @@
                     CornerRadius="5"
                     Effect="{StaticResource EffectShadow5}"
                     Style="{StaticResource BorderRegion}">
-
-                    <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
-                        <Button
-                            MinWidth="50"
-                            MinHeight="35"
-                            Margin="0,0,10,0"
-                            hc:Poptip.Content="导入参数"
-                            hc:Poptip.Placement="TopLeft"
-                            Style="{StaticResource ButtonDashed}">
-                            <TextBlock
-                                HorizontalAlignment="Center"
-                                FontFamily="/Resource/Icon/#iconfont"
-                                FontSize="20"
-                                Text="&#xe64b;" />
-                        </Button>
-                        <Button
-                            MinWidth="50"
-                            MinHeight="35"
-                            Margin="10,0,10,0"
-                            hc:Poptip.Content="导出参数"
-                            hc:Poptip.Placement="TopLeft"
-                            Style="{StaticResource ButtonDashed}">
-                            <TextBlock
-                                HorizontalAlignment="Center"
-                                FontFamily="/Resource/Icon/#iconfont"
-                                FontSize="20"
-                                Text="&#xe656;" />
-                        </Button>
-                        <Button
-                            MinWidth="50"
-                            MinHeight="35"
-                            Margin="10,0,10,0"
-                            hc:Poptip.Content="导入数据"
-                            hc:Poptip.Placement="TopLeft"
-                            Style="{StaticResource ButtonDashed}">
-                            <TextBlock
-                                HorizontalAlignment="Center"
-                                FontFamily="/Resource/Icon/#iconfont"
-                                FontSize="20"
-                                Text="&#xe604;" />
-                        </Button>
-                        <Button
-                            MinWidth="50"
-                            MinHeight="35"
-                            Margin="10,0,10,0"
-                            hc:Poptip.Content="导出数据"
-                            hc:Poptip.Placement="TopLeft"
-                            Style="{StaticResource ButtonDashed}">
-                            <TextBlock
-                                HorizontalAlignment="Center"
-                                FontFamily="/Resource/Icon/#iconfont"
-                                FontSize="20"
-                                Text="&#xe604;" />
-                        </Button>
-                    </StackPanel>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="8*" />
+                            <ColumnDefinition Width="2*" />
+                        </Grid.ColumnDefinitions>
+                        <StackPanel
+                            Grid.Column="0"
+                            HorizontalAlignment="Left"
+                            Orientation="Horizontal">
+                            <Button
+                                MinWidth="50"
+                                MinHeight="35"
+                                Margin="0,0,10,0"
+                                Style="{StaticResource ButtonDashed}"
+                                ToolTip="导入参数"
+                                ToolTipService.InitialShowDelay="1"
+                                ToolTipService.Placement="Top">
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    FontFamily="/Resource/Icon/#iconfont"
+                                    FontSize="20"
+                                    Text="&#xe8c7;" />
+                            </Button>
+                            <Button
+                                MinWidth="50"
+                                MinHeight="35"
+                                Margin="10,0,10,0"
+                                Style="{StaticResource ButtonDashed}"
+                                ToolTip="导出参数"
+                                ToolTipService.InitialShowDelay="1"
+                                ToolTipService.Placement="Top">
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    FontFamily="/Resource/Icon/#iconfont"
+                                    FontSize="20"
+                                    Text="&#xe8c6;" />
+                            </Button>
+                            <Button
+                                MinWidth="50"
+                                MinHeight="35"
+                                Margin="10,0,10,0"
+                                Style="{StaticResource ButtonDashed}"
+                                ToolTip="Excel数据"
+                                ToolTipService.InitialShowDelay="1"
+                                ToolTipService.Placement="Top">
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    FontFamily="/Resource/Icon/#iconfont"
+                                    FontSize="20"
+                                    Text="&#xe609;" />
+                            </Button>
+                            <Button
+                                MinWidth="50"
+                                MinHeight="35"
+                                Margin="10,0,10,0"
+                                Style="{StaticResource ButtonDashed}"
+                                ToolTip="CSV数据"
+                                ToolTipService.InitialShowDelay="1"
+                                ToolTipService.Placement="Top">
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    FontFamily="/Resource/Icon/#iconfont"
+                                    FontSize="20"
+                                    Text="&#xe6e0;" />
+                            </Button>
+                            <Button
+                                MinWidth="50"
+                                MinHeight="35"
+                                Margin="10,0,10,0"
+                                Style="{StaticResource ButtonDashed}"
+                                ToolTip="MatLab数据"
+                                ToolTipService.InitialShowDelay="1"
+                                ToolTipService.Placement="Top">
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    FontFamily="/Resource/Icon/#iconfont"
+                                    FontSize="20"
+                                    Text="&#xe674;" />
+                            </Button>
+                        </StackPanel>
+                        <Border
+                            Grid.Column="1"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center">
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock HorizontalAlignment="Center" Text="为该功能点亮星星" />
+                                <hc:Rate
+                                    Margin="10,2,0,0"
+                                    Count="5"
+                                    Foreground="#FFD642"
+                                    Value="3" />
+                            </StackPanel>
+                        </Border>
+                    </Grid>
                 </Border>
+
             </Grid>
         </hc:TransitioningContentControl>
     </Border>

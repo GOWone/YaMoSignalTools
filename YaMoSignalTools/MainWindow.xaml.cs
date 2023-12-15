@@ -93,5 +93,10 @@ namespace YaMoSignalTools
             window.Source = new Uri("./Dialog/FeedBackPage.xaml", UriKind.Relative);
             window.Show();
         }
+
+        private void JumpToGithubPage_Event(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/GOWone/YaMoSignalTools");
+        }
     }
 }
