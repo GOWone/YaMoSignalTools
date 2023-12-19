@@ -12,168 +12,182 @@
     Background="Transparent"
     mc:Ignorable="d">
 
-    <Grid>
-        <hc:TransitioningContentControl BorderThickness="0">
-            <Grid Margin="32">
+    <hc:TransitioningContentControl>
+        <hc:Watermark FontSize="100" Mark=" YaMo Studio ">
+            <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
                     <RowDefinition />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
                 </Grid.RowDefinitions>
-                <Border BorderBrush="{DynamicResource BorderBrush}" BorderThickness="0">
-                    <hc:ScrollViewer
-                        hc:ScrollViewerAttach.Orientation="Horizontal"
-                        HorizontalScrollBarVisibility="Auto"
-                        IsInertiaEnabled="True"
-                        VerticalScrollBarVisibility="Hidden">
-                        <StackPanel Orientation="Horizontal">
-                            <Border
-                                Width="200"
-                                Height="200"
-                                Margin="10,10,32,10"
-                                Style="{StaticResource BorderRegion}">
-                                <Border Background="{DynamicResource PrimaryBrush}">
-                                    <TextBlock
-                                        HorizontalAlignment="Center"
-                                        VerticalAlignment="Center"
-                                        Foreground="White"
-                                        Text="123" />
-                                </Border>
-                            </Border>
-                            <Border
-                                Width="200"
-                                Height="200"
-                                Margin="10,10,32,10"
-                                Style="{StaticResource BorderRegion}">
-                                <Border Background="{DynamicResource PrimaryBrush}">
-                                    <TextBlock
-                                        HorizontalAlignment="Center"
-                                        VerticalAlignment="Center"
-                                        Foreground="White"
-                                        Text="123" />
-                                </Border>
-                            </Border>
-                            <Border
-                                Width="200"
-                                Height="200"
-                                Margin="10,10,32,10"
-                                Style="{StaticResource BorderRegion}">
-                                <Border Background="{DynamicResource PrimaryBrush}">
-                                    <TextBlock
-                                        HorizontalAlignment="Center"
-                                        VerticalAlignment="Center"
-                                        Foreground="White"
-                                        Text="123" />
-                                </Border>
-                            </Border>
-                            <Border
-                                Width="200"
-                                Height="200"
-                                Margin="10,10,32,10"
-                                Style="{StaticResource BorderRegion}">
-                                <Border Background="{DynamicResource PrimaryBrush}">
-                                    <TextBlock
-                                        HorizontalAlignment="Center"
-                                        VerticalAlignment="Center"
-                                        Foreground="White"
-                                        Text="123" />
-                                </Border>
-                            </Border>
-                            <Border
-                                Width="200"
-                                Height="200"
-                                Margin="10,10,32,10"
-                                Style="{StaticResource BorderRegion}">
-                                <Border Background="{DynamicResource PrimaryBrush}">
-                                    <TextBlock
-                                        HorizontalAlignment="Center"
-                                        VerticalAlignment="Center"
-                                        Foreground="White"
-                                        Text="123" />
-                                </Border>
-                            </Border>
-                        </StackPanel>
-                    </hc:ScrollViewer>
-                </Border>
-                <Border
+
+                <Image
+                    Grid.Row="0"
+                    Width="60"
+                    Height="60"
+                    Source="/Resource/Icon/yamo.png" />
+                <StackPanel
                     Grid.Row="1"
-                    Margin="0,16,0,0"
-                    BorderBrush="{DynamicResource BorderBrush}"
-                    BorderThickness="1">
-                    <hc:ScrollViewer
-                        hc:ScrollViewerAttach.AutoHide="False"
-                        BorderThickness="0"
-                        IsInertiaEnabled="True">
-                        <WrapPanel Orientation="Horizontal">
-                            <Border
-                                Width="200"
-                                Height="200"
-                                Margin="10,10,32,10"
-                                BorderThickness="0"
-                                Style="{StaticResource BorderRegion}">
-                                <Border Background="{DynamicResource PrimaryBrush}">
+                    Margin="32"
+                    Orientation="Vertical">
+                    <StackPanel
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Orientation="Horizontal">
+                        <Image
+                            Grid.Row="0"
+                            Width="64"
+                            Height="64"
+                            Source="/Resource/Icon/logo1.png" />
+                        <TextBlock
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            FontFamily="/Resource/Font/#Orbitron Medium"
+                            FontSize="30"
+                            Foreground="Black"
+                            Text="YaMo SignalTools" />
+                    </StackPanel>
+
+                    <TextBlock
+                        HorizontalAlignment="Center"
+                        FontSize="15"
+                        Foreground="#585E78"
+                        Text="高速度、大容量的数字信号处理工具" />
+                    <StackPanel
+                        Margin="32,5,32,5"
+                        HorizontalAlignment="Center"
+                        Orientation="Horizontal">
+                        <hc:Shield
+                            Margin="5,0,0,0"
+                            Status="&gt;=4.8"
+                            Subject=".net"
+                            Color="#1182c3" />
+                        <hc:Shield
+                            Margin="5,0,0,0"
+                            Status="8.0"
+                            Subject="c#"
+                            Color="#1182c3" />
+                        <hc:Shield
+                            Margin="5,0,0,0"
+                            Status="2022"
+                            Subject="IDE"
+                            Color="#1182c3" />
+                    </StackPanel>
+                </StackPanel>
+                <hc:ScrollViewer
+                    Grid.Row="2"
+                    Width="400"
+                    Margin="10"
+                    IsInertiaEnabled="True">
+                    <hc:UniformSpacingPanel
+                        HorizontalAlignment="Center"
+                        ChildWrapping="Wrap"
+                        ItemHeight="150"
+                        ItemWidth="150"
+                        Spacing="32">
+                        <Border Effect="{StaticResource EffectShadow2}" Style="{StaticResource BorderRegion}">
+                            <Border>
+                                <StackPanel
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Orientation="Vertical">
                                     <TextBlock
+                                        Margin="2"
                                         HorizontalAlignment="Center"
                                         VerticalAlignment="Center"
-                                        Foreground="White"
-                                        Text="123" />
-                                </Border>
-                            </Border>
-                            <Border
-                                Width="200"
-                                Height="200"
-                                Margin="10,10,32,10"
-                                Style="{StaticResource BorderRegion}">
-                                <Border Background="{DynamicResource PrimaryBrush}">
+                                        FontFamily="/Resource/Icon/#iconfont"
+                                        FontSize="40"
+                                        Foreground="Black"
+                                        Text="&#xe602;" />
                                     <TextBlock
+                                        Margin="2"
                                         HorizontalAlignment="Center"
                                         VerticalAlignment="Center"
-                                        Foreground="White"
-                                        Text="123" />
-                                </Border>
+                                        FontSize="16"
+                                        Foreground="Black"
+                                        Text="信号生成器" />
+                                </StackPanel>
                             </Border>
-                            <Border
-                                Width="200"
-                                Height="200"
-                                Margin="10,10,32,10"
-                                Style="{StaticResource BorderRegion}">
-                                <Border Background="{DynamicResource PrimaryBrush}">
+                        </Border>
+                        <Border Effect="{StaticResource EffectShadow3}" Style="{StaticResource BorderRegion}">
+                            <Border>
+                                <StackPanel
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Orientation="Vertical">
                                     <TextBlock
+                                        Margin="2"
                                         HorizontalAlignment="Center"
                                         VerticalAlignment="Center"
-                                        Foreground="White"
-                                        Text="123" />
-                                </Border>
-                            </Border>
-                            <Border
-                                Width="200"
-                                Height="200"
-                                Margin="10,10,32,10"
-                                Style="{StaticResource BorderRegion}">
-                                <Border Background="{DynamicResource PrimaryBrush}">
+                                        FontFamily="/Resource/Icon/#iconfont"
+                                        FontSize="40"
+                                        Foreground="Black"
+                                        Text="&#xe7cf;" />
                                     <TextBlock
+                                        Margin="2"
                                         HorizontalAlignment="Center"
                                         VerticalAlignment="Center"
-                                        Foreground="White"
-                                        Text="123" />
-                                </Border>
+                                        FontSize="16"
+                                        Foreground="Black"
+                                        Text="信号变换器" />
+                                </StackPanel>
                             </Border>
-                            <Border
-                                Width="200"
-                                Height="200"
-                                Margin="10,10,32,10"
-                                Style="{StaticResource BorderRegion}">
-                                <Border Background="{DynamicResource PrimaryBrush}">
+                        </Border>
+                        <Border Effect="{StaticResource EffectShadow4}" Style="{StaticResource BorderRegion}">
+                            <Border>
+                                <StackPanel
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Orientation="Vertical">
                                     <TextBlock
+                                        Margin="2"
                                         HorizontalAlignment="Center"
                                         VerticalAlignment="Center"
-                                        Foreground="White"
-                                        Text="123" />
-                                </Border>
+                                        FontFamily="/Resource/Icon/#iconfont"
+                                        FontSize="40"
+                                        Foreground="Black"
+                                        Text="&#xe7d0;" />
+                                    <TextBlock
+                                        Margin="2"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        FontSize="16"
+                                        Foreground="Black"
+                                        Text="信号滤波器" />
+                                </StackPanel>
                             </Border>
-                        </WrapPanel>
-                    </hc:ScrollViewer>
-                </Border>
+                        </Border>
+                        <Border Effect="{StaticResource EffectShadow5}" Style="{StaticResource BorderRegion}">
+                            <Border>
+                                <StackPanel
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Orientation="Vertical">
+                                    <TextBlock
+                                        Margin="2"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        FontFamily="/Resource/Icon/#iconfont"
+                                        FontSize="40"
+                                        Foreground="Black"
+                                        Text="&#xe613;" />
+                                    <TextBlock
+                                        Margin="2"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        FontSize="16"
+                                        Foreground="Black"
+                                        Text="通用处理单元" />
+                                </StackPanel>
+                            </Border>
+                        </Border>
+                    </hc:UniformSpacingPanel>
+                </hc:ScrollViewer>
+                <Viewbox Grid.Row="3" MaxWidth="600">
+                    <hc:FlipClock Margin="32,5,32,5" />
+                </Viewbox>
             </Grid>
-        </hc:TransitioningContentControl>
-    </Grid>
+        </hc:Watermark>
+    </hc:TransitioningContentControl>
 </Page>

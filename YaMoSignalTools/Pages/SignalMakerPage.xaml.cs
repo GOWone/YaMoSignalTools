@@ -25,7 +25,7 @@ namespace YaMoSignalTools.Pages
         {
             InitializeComponent();
             Init();
-            test1.ItemsSource = DataList; test2.ItemsSource = DataList; 
+            SigTypeSelector.ItemsSource = DataList; 
         }
 
         List<string> DataList;
@@ -61,13 +61,47 @@ namespace YaMoSignalTools.Pages
             WpfPlot2.Refresh();
             WpfPlot3.Refresh();
 
-            PeriodSignalParamPage periodSignalParamPage = new PeriodSignalParamPage();
-            if (periodSignalParamPage != null)
+
+        }
+
+        private void SelectedSigType_Event(object sender, SelectionChangedEventArgs e)
+        {
+            if (this.SigTypeSelector.SelectedValue == null) {
+                return;
+            }
+            string sigType = this.SigTypeSelector.SelectedValue.ToString();
+            switch (sigType)
             {
-                SignalParamPresenter.Content = new Frame()
-                {
-                    Content = periodSignalParamPage
-                };
+                case "周期信号":
+                    PeriodSignalParamPage periodSignalParamPage = new PeriodSignalParamPage();
+                    if (periodSignalParamPage != null)
+                    {
+                        SignalParamPresenter.Content = new Frame()
+                        {
+                            Content = periodSignalParamPage
+                        };
+                    }
+                    break;
+                case "噪声信号":
+                    NoiseSignalParamPage noiseSignalParamPage = new NoiseSignalParamPage();
+                    if (noiseSignalParamPage != null)
+                    {
+                        SignalParamPresenter.Content = new Frame()
+                        {
+                            Content = noiseSignalParamPage
+                        };
+                    }
+                    break;
+                case "混合信号":
+                    MiscSignalParamPage miscSignalParamPage = new MiscSignalParamPage();
+                    if (miscSignalParamPage != null)
+                    {
+                        SignalParamPresenter.Content = new Frame()
+                        {
+                            Content = miscSignalParamPage
+                        };
+                    }
+                    break;
             }
         }
     }

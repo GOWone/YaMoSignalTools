@@ -20,9 +20,12 @@ namespace YaMoSignalTools.Pages
     /// </summary>
     public partial class PeriodSignalParamPage : Page
     {
+        List<string> DataList = new List<string>() { 
+            "正弦信号生成器", "余弦信号生成器", "三角波信号生成器", "方波信号生成器", "脉冲波信号生成器", "锯齿波信号生成器"};
         public PeriodSignalParamPage()
         {
             InitializeComponent();
+            PeriodSigSelector.ItemsSource = DataList;
         }
     }
 }

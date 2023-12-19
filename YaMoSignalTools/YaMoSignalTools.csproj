@@ -232,5 +232,8 @@
   <ItemGroup>
     <Resource Include="Resource\Icon\yamo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Icon\logo1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

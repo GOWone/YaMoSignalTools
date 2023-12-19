@@ -8,7 +8,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="YaMo SignalTools"
     Width="1200"
-    Height="800"
+    Height="850"
     MinWidth="400"
     MinHeight="600"
     Background="{DynamicResource RegionBrush}"
@@ -121,6 +121,7 @@
                     <UniformGrid Columns="4" Rows="1">
                         <Button
                             Padding="10,5,10,5"
+                            BorderThickness="0"
                             Style="{StaticResource ButtonDashed}"
                             ToolTip="设置"
                             ToolTipService.InitialShowDelay="1"
@@ -133,6 +134,7 @@
                         </Button>
                         <Button
                             Padding="10,5,10,5"
+                            BorderThickness="0"
                             Click="JumpToFeedBackPage_Event"
                             Style="{StaticResource ButtonDashed}"
                             ToolTip="反馈"
@@ -146,6 +148,7 @@
                         </Button>
                         <Button
                             Padding="10,5,10,5"
+                            BorderThickness="0"
                             Style="{StaticResource ButtonDashed}"
                             ToolTip="关于我们"
                             ToolTipService.InitialShowDelay="1"
@@ -158,6 +161,7 @@
                         </Button>
                         <Button
                             Padding="10,5,10,5"
+                            BorderThickness="0"
                             Hyperlink.Click="JumpToGithubPage_Event"
                             Style="{StaticResource ButtonDashed}"
                             ToolTip="Github"

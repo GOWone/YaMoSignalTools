@@ -20,9 +20,12 @@ namespace YaMoSignalTools.Pages
     /// </summary>
     public partial class MiscSignalParamPage : Page
     {
+        List<string> DataList = new List<string>() {
+            "WaveTable信号生成器", " Adsr信号生成器", "Ramp信号生成器", "Sinc信号生成器", "Chirp信号生成器", "PadSynth信号生成器", "KarplusStrong信号生成器", "KarplusStrongDrum信号生成器"};
         public MiscSignalParamPage()
         {
             InitializeComponent();
+            MiscSigSelector.ItemsSource = DataList;
         }
     }
 }
