@@ -70,7 +70,7 @@
                             Color="#1182c3" />
                         <hc:Shield
                             Margin="5,0,0,0"
-                            Status="2022"
+                            Status="Visual Studio 2022"
                             Subject="IDE"
                             Color="#1182c3" />
                     </StackPanel>
