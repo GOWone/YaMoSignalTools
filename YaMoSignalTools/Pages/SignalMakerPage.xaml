@@ -264,12 +264,8 @@
 
             <!--  功能配置区  -->
             <Grid Grid.Row="1" Margin="10">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="7*" />
-                    <ColumnDefinition Width="2*" />
-                </Grid.ColumnDefinitions>
                 <!--  参数设置  -->
-                <Grid Grid.Column="0">
+                <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
@@ -303,15 +299,6 @@
                         <ContentControl x:Name="SignalParamPresenter" Margin="0" />
                     </Border>
                 </Grid>
-                <StackPanel
-                    Grid.Column="1"
-                    MinWidth="150"
-                    Orientation="Vertical">
-                    <TextBlock
-                        HorizontalAlignment="Left"
-                        FontSize="15"
-                        Text="结果信息" />
-                </StackPanel>
             </Grid>
             <!--  底部工具栏  -->
             <Border

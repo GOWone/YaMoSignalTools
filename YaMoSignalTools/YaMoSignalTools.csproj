@@ -164,6 +164,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\SigMakerResInfo.cs" />
     <Compile Include="Pages\CommonSignalOperatorPage.xaml.cs">
       <DependentUpon>CommonSignalOperatorPage.xaml</DependentUpon>
     </Compile>
@@ -234,6 +235,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resource\Icon\logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Extensions\CommonSignalProcessTools\" />
+    <Folder Include="Extensions\SignalFilterTools\" />
+    <Folder Include="Extensions\SignalMakerTools\" />
+    <Folder Include="Extensions\SignalTransferTools\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
