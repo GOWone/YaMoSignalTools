@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using YaMoSignalTools.Dialog;
 using YaMoSignalTools.Pages;
 
 namespace YaMoSignalTools
@@ -100,16 +99,41 @@ namespace YaMoSignalTools
             }
         }
 
+        public static FeedBackPage feedbackPage = null;
         private void JumpToFeedBackPage_Event(object sender, RoutedEventArgs e)
         {
-            NavigationWindow window = new NavigationWindow();
-            window.Source = new Uri("./Dialog/FeedBackPage.xaml", UriKind.Relative);
-            window.Show();
+            if (feedbackPage == null)
+            {
+                feedbackPage = new FeedBackPage();
+                feedbackPage.Show();
+            }
+            else
+            {
+                feedbackPage.Activate();
+                feedbackPage.WindowState = WindowState.Normal;
+            }
         }
 
         private void JumpToGithubPage_Event(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/GOWone/YaMoSignalTools");
+        }
+
+        private void JumpToAboutUsPage_Event(object sender, RoutedEventArgs e)
+        {
+            Init();
+        }
+
+        private void JumpToSettingPage_Event(object sender, RoutedEventArgs e)
+        {
+            SystemSettingPage systemSettingPage = new SystemSettingPage();
+            if (systemSettingPage != null)
+            {
+                MainWindowPresenter.Content = new Frame()
+                {
+                    Content = systemSettingPage
+                };
+            }
         }
     }
 }

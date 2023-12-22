@@ -1,0 +1,91 @@
+﻿<Page
+    x:Class="YaMoSignalTools.Pages.SystemSettingPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:hc="https://handyorg.github.io/handycontrol"
+    xmlns:local="clr-namespace:YaMoSignalTools.Pages"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="系统设置"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    FontFamily="微软雅黑"
+    mc:Ignorable="d">
+    <hc:TransitioningContentControl>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <!--  功能侧边栏  -->
+            <Border
+                Grid.Column="0"
+                Margin="2"
+                CornerRadius="5 0 0 5">
+                <hc:TransitioningContentControl>
+                    <hc:SideMenu MinWidth="200" TabIndex="0">
+                        <hc:Interaction.Triggers>
+                            <hc:EventTrigger EventName="SelectionChanged">
+                                <hc:EventToCommand Command="{Binding SwitchItemCmd}" PassEventArgsToCommand="True" />
+                            </hc:EventTrigger>
+                        </hc:Interaction.Triggers>
+                        <hc:SideMenuItem Header="通用">
+                            <hc:SideMenuItem.Icon>
+                                <TextBlock
+                                    FontFamily="/Resource/Icon/#iconfont"
+                                    FontSize="25"
+                                    Text="&#xe61c;" />
+                            </hc:SideMenuItem.Icon>
+                        </hc:SideMenuItem>
+                        <hc:SideMenuItem Header="存储管理">
+                            <hc:SideMenuItem.Icon>
+                                <TextBlock
+                                    FontFamily="/Resource/Icon/#iconfont"
+                                    FontSize="25"
+                                    Text="&#xe62b;" />
+                            </hc:SideMenuItem.Icon>
+
+                        </hc:SideMenuItem>
+                        <hc:SideMenuItem Header="参数配置">
+                            <hc:SideMenuItem.Icon>
+                                <TextBlock
+                                    FontFamily="/Resource/Icon/#iconfont"
+                                    FontSize="25"
+                                    Text="&#xe65b;" />
+                            </hc:SideMenuItem.Icon>
+
+                        </hc:SideMenuItem>
+                        <hc:SideMenuItem Header="个人中心">
+                            <hc:SideMenuItem.Icon>
+                                <TextBlock
+                                    FontFamily="/Resource/Icon/#iconfont"
+                                    FontSize="25"
+                                    Text="&#xe61e;" />
+                            </hc:SideMenuItem.Icon>
+
+                        </hc:SideMenuItem>
+                        <hc:SideMenuItem Header="关于YaMo SignalTools" MouseLeftButtonDown="JumpToSetAboutUs_Event">
+                            <hc:SideMenuItem.Icon>
+                                <TextBlock
+                                    FontFamily="/Resource/Icon/#iconfont"
+                                    FontSize="25"
+                                    Text="&#xe69a;" />
+                            </hc:SideMenuItem.Icon>
+                        </hc:SideMenuItem>
+                    </hc:SideMenu>
+                </hc:TransitioningContentControl>
+            </Border>
+
+            <Border
+                Grid.Column="1"
+                Margin="5,2,2,2"
+                BorderThickness="0"
+                CornerRadius="0">
+                <hc:TransitioningContentControl>
+                    <ContentControl x:Name="SettingPresenter" />
+                </hc:TransitioningContentControl>
+            </Border>
+        </Grid>
+    </hc:TransitioningContentControl>
+</Page>

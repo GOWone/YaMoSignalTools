@@ -12,6 +12,7 @@
     MinWidth="400"
     MinHeight="600"
     Background="{DynamicResource RegionBrush}"
+    FontFamily="微软雅黑"
     Icon="Resource/Icon/logo.png"
     ResizeMode="CanResize"
     WindowStartupLocation="CenterScreen"
@@ -63,13 +64,13 @@
                         </hc:Interaction.Triggers>
                         <hc:SideMenuItem
                             FontFamily="Resource/Font/#Orbitron Medium"
-                            Header="YaMo SignalTools"
+                            Header="开始"
                             MouseLeftButtonDown="JunpToIndexPage_Event">
                             <hc:SideMenuItem.Icon>
                                 <TextBlock
                                     FontFamily="Resource/Icon/#iconfont"
                                     FontSize="25"
-                                    Text="&#xe69a;" />
+                                    Text="&#xe614;" />
                             </hc:SideMenuItem.Icon>
                         </hc:SideMenuItem>
                         <hc:SideMenuItem Header="信号生成器" MouseLeftButtonDown="JunpToSignalMakerPage_Event">
@@ -122,6 +123,7 @@
                         <Button
                             Padding="10,5,10,5"
                             BorderThickness="0"
+                            Click="JumpToSettingPage_Event"
                             Style="{StaticResource ButtonDashed}"
                             ToolTip="设置"
                             ToolTipService.InitialShowDelay="1"
@@ -149,6 +151,7 @@
                         <Button
                             Padding="10,5,10,5"
                             BorderThickness="0"
+                            Click="JumpToAboutUsPage_Event"
                             Style="{StaticResource ButtonDashed}"
                             ToolTip="关于我们"
                             ToolTipService.InitialShowDelay="1"

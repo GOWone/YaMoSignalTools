@@ -10,6 +10,8 @@
     Title="SignalMakerPage"
     d:DesignHeight="450"
     d:DesignWidth="800"
+    FontFamily="微软雅黑"
+    WindowTitle="信号生成器"
     mc:Ignorable="d">
     <hc:TransitioningContentControl>
         <Grid>
