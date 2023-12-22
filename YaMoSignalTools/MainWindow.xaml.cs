@@ -25,6 +25,19 @@ namespace YaMoSignalTools
         public MainWindow()
         {
             InitializeComponent();
+            Init();
+        }
+
+        public void Init()
+        {
+            IndexPage indexPage = new IndexPage();
+            if (indexPage != null)
+            {
+                MainWindowPresenter.Content = new Frame()
+                {
+                    Content = indexPage
+                };
+            }
         }
 
         private void JunpToIndexPage_Event(object sender, MouseButtonEventArgs e)

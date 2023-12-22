@@ -55,7 +55,7 @@
                 Effect="{StaticResource EffectShadow5}"
                 Style="{StaticResource BorderRegion}">
                 <hc:TransitioningContentControl>
-                    <hc:SideMenu MinWidth="200">
+                    <hc:SideMenu MinWidth="200" TabIndex="0">
                         <hc:Interaction.Triggers>
                             <hc:EventTrigger EventName="SelectionChanged">
                                 <hc:EventToCommand Command="{Binding SwitchItemCmd}" PassEventArgsToCommand="True" />
