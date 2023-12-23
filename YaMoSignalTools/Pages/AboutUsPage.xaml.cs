@@ -16,25 +16,13 @@ using System.Windows.Shapes;
 namespace YaMoSignalTools.Pages
 {
     /// <summary>
-    /// SystemSettingPage.xaml 的交互逻辑
+    /// IndexPage.xaml 的交互逻辑
     /// </summary>
-    public partial class SystemSettingPage : Page
+    public partial class AboutUsPage : Page
     {
-        public SystemSettingPage()
+        public AboutUsPage()
         {
             InitializeComponent();
-        }
-
-        private void JumpToSetAboutUs_Event(object sender, MouseButtonEventArgs e)
-        {
-            AboutUsPage aboutUsPage = new AboutUsPage();
-            if (aboutUsPage != null)
-            {
-                SettingPresenter.Content = new Frame()
-                {
-                    Content = aboutUsPage
-                };
-            }
         }
     }
 }

@@ -6,189 +6,141 @@
     xmlns:hc="https://handyorg.github.io/handycontrol"
     xmlns:local="clr-namespace:YaMoSignalTools.Pages"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Title="关于"
+    Title="IndexPage"
     d:DesignHeight="450"
     d:DesignWidth="800"
-    Background="Transparent"
-    FontFamily="微软雅黑"
     mc:Ignorable="d">
 
     <hc:TransitioningContentControl>
-        <hc:Watermark FontSize="100" Mark=" YaMo Studio ">
-            <Grid>
+        <Grid Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <!--  开始  -->
+            <Grid Grid.Row="0">
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
                     <RowDefinition />
-                    <RowDefinition Height="auto" />
-                    <RowDefinition Height="auto" />
-                    <RowDefinition Height="auto" />
                 </Grid.RowDefinitions>
-
-                <Image
+                <TextBlock
                     Grid.Row="0"
-                    Width="60"
-                    Height="60"
-                    Source="/Resource/Icon/yamo.png" />
+                    Margin="0,5,0,0"
+                    FontSize="15"
+                    FontWeight="DemiBold"
+                    Text="开始" />
                 <StackPanel
                     Grid.Row="1"
-                    Margin="32"
+                    Margin="0,10,0,10"
                     Orientation="Vertical">
-                    <StackPanel
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Center"
-                        Orientation="Horizontal">
-                        <Image
-                            Grid.Row="0"
-                            Width="64"
-                            Height="64"
-                            Source="/Resource/Icon/logo1.png" />
-                        <TextBlock
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center"
-                            FontFamily="/Resource/Font/#Orbitron Medium"
-                            FontSize="30"
-                            Foreground="Black"
-                            Text="YaMo SignalTools" />
-                    </StackPanel>
-
-                    <TextBlock
-                        HorizontalAlignment="Center"
-                        FontSize="15"
-                        Foreground="#585E78"
-                        Text="高速度、大容量的数字信号处理工具" />
-                    <StackPanel
-                        Margin="32,5,32,5"
-                        HorizontalAlignment="Center"
-                        Orientation="Horizontal">
-                        <hc:Shield
-                            Margin="5,0,0,0"
-                            Status="&gt;=4.8"
-                            Subject=".Net"
-                            Color="#1182c3" />
-                        <hc:Shield
-                            Margin="5,0,0,0"
-                            Status="8.0"
-                            Subject="CSharp"
-                            Color="#1182c3" />
-                        <hc:Shield
-                            Margin="5,0,0,0"
-                            Status="Visual Studio 2022"
-                            Subject="IDE"
-                            Color="#1182c3" />
-                    </StackPanel>
+                    <Border Margin="2" Style="{StaticResource BorderTipSuccess}">
+                        <StackPanel Orientation="Horizontal">
+                            <Button BorderThickness="0" Style="{StaticResource ButtonDashed}">
+                                <TextBlock
+                                    HorizontalAlignment="Right"
+                                    VerticalAlignment="Center"
+                                    FontFamily="/Resource/Icon/#iconfont"
+                                    FontSize="18"
+                                    Text="&#xe6e2;" />
+                            </Button>
+                            <TextBlock VerticalAlignment="Center" Text="软件使用入门" />
+                        </StackPanel>
+                    </Border>
+                    <Border Margin="2" Style="{StaticResource BorderTipSuccess}">
+                        <StackPanel Orientation="Horizontal">
+                            <Button BorderThickness="0" Style="{StaticResource ButtonDashed}">
+                                <TextBlock
+                                    HorizontalAlignment="Right"
+                                    VerticalAlignment="Center"
+                                    FontFamily="/Resource/Icon/#iconfont"
+                                    FontSize="18"
+                                    Text="&#xe6e2;" />
+                            </Button>
+                            <TextBlock VerticalAlignment="Center" Text="DSPLibrary API文档" />
+                        </StackPanel>
+                    </Border>
+                    <Border Margin="2" Style="{StaticResource BorderTipSuccess}">
+                        <StackPanel Orientation="Horizontal">
+                            <Button BorderThickness="0" Style="{StaticResource ButtonDashed}">
+                                <TextBlock
+                                    HorizontalAlignment="Right"
+                                    VerticalAlignment="Center"
+                                    FontFamily="/Resource/Icon/#iconfont"
+                                    FontSize="18"
+                                    Text="&#xe6e2;" />
+                            </Button>
+                            <TextBlock VerticalAlignment="Center" Text="更多YaMo Studio软件" />
+                        </StackPanel>
+                    </Border>
                 </StackPanel>
-                <hc:ScrollViewer
-                    Grid.Row="2"
-                    Width="400"
-                    Margin="10"
-                    IsInertiaEnabled="True">
-                    <hc:UniformSpacingPanel
-                        HorizontalAlignment="Center"
-                        ChildWrapping="Wrap"
-                        ItemHeight="150"
-                        ItemWidth="150"
-                        Spacing="32">
-                        <Border Effect="{StaticResource EffectShadow2}" Style="{StaticResource BorderRegion}">
-                            <Border>
-                                <StackPanel
-                                    HorizontalAlignment="Center"
-                                    VerticalAlignment="Center"
-                                    Orientation="Vertical">
-                                    <TextBlock
-                                        Margin="2"
-                                        HorizontalAlignment="Center"
-                                        VerticalAlignment="Center"
-                                        FontFamily="/Resource/Icon/#iconfont"
-                                        FontSize="40"
-                                        Foreground="Black"
-                                        Text="&#xe602;" />
-                                    <TextBlock
-                                        Margin="2"
-                                        HorizontalAlignment="Center"
-                                        VerticalAlignment="Center"
-                                        FontSize="16"
-                                        Foreground="Black"
-                                        Text="信号生成器" />
-                                </StackPanel>
-                            </Border>
-                        </Border>
-                        <Border Effect="{StaticResource EffectShadow3}" Style="{StaticResource BorderRegion}">
-                            <Border>
-                                <StackPanel
-                                    HorizontalAlignment="Center"
-                                    VerticalAlignment="Center"
-                                    Orientation="Vertical">
-                                    <TextBlock
-                                        Margin="2"
-                                        HorizontalAlignment="Center"
-                                        VerticalAlignment="Center"
-                                        FontFamily="/Resource/Icon/#iconfont"
-                                        FontSize="40"
-                                        Foreground="Black"
-                                        Text="&#xe7cf;" />
-                                    <TextBlock
-                                        Margin="2"
-                                        HorizontalAlignment="Center"
-                                        VerticalAlignment="Center"
-                                        FontSize="16"
-                                        Foreground="Black"
-                                        Text="信号变换器" />
-                                </StackPanel>
-                            </Border>
-                        </Border>
-                        <Border Effect="{StaticResource EffectShadow4}" Style="{StaticResource BorderRegion}">
-                            <Border>
-                                <StackPanel
-                                    HorizontalAlignment="Center"
-                                    VerticalAlignment="Center"
-                                    Orientation="Vertical">
-                                    <TextBlock
-                                        Margin="2"
-                                        HorizontalAlignment="Center"
-                                        VerticalAlignment="Center"
-                                        FontFamily="/Resource/Icon/#iconfont"
-                                        FontSize="40"
-                                        Foreground="Black"
-                                        Text="&#xe7d0;" />
-                                    <TextBlock
-                                        Margin="2"
-                                        HorizontalAlignment="Center"
-                                        VerticalAlignment="Center"
-                                        FontSize="16"
-                                        Foreground="Black"
-                                        Text="信号滤波器" />
-                                </StackPanel>
-                            </Border>
-                        </Border>
-                        <Border Effect="{StaticResource EffectShadow5}" Style="{StaticResource BorderRegion}">
-                            <Border>
-                                <StackPanel
-                                    HorizontalAlignment="Center"
-                                    VerticalAlignment="Center"
-                                    Orientation="Vertical">
-                                    <TextBlock
-                                        Margin="2"
-                                        HorizontalAlignment="Center"
-                                        VerticalAlignment="Center"
-                                        FontFamily="/Resource/Icon/#iconfont"
-                                        FontSize="40"
-                                        Foreground="Black"
-                                        Text="&#xe613;" />
-                                    <TextBlock
-                                        Margin="2"
-                                        HorizontalAlignment="Center"
-                                        VerticalAlignment="Center"
-                                        FontSize="16"
-                                        Foreground="Black"
-                                        Text="通用处理单元" />
-                                </StackPanel>
-                            </Border>
-                        </Border>
-                    </hc:UniformSpacingPanel>
-                </hc:ScrollViewer>
-                <Viewbox Grid.Row="3" MaxWidth="600">
-                    <hc:FlipClock Margin="32,5,32,5" />
-                </Viewbox>
             </Grid>
-        </hc:Watermark>
+            <!--  最近活动  -->
+            <TextBlock
+                Grid.Row="1"
+                Margin="0,5,0,0"
+                FontSize="15"
+                FontWeight="DemiBold"
+                Text="最近工程" />
+            <DataGrid
+                x:Name="ProjectInfoList"
+                Grid.Row="2"
+                Margin="0,5,0,0"
+                AutoGenerateColumns="False"
+                HeadersVisibility="All"
+                IsReadOnly="True"
+                ItemsSource="{Binding indexProjectInfoListItems}"
+                RowHeaderWidth="60">
+                <DataGrid.RowHeaderTemplate>
+                    <DataTemplate>
+                        <CheckBox IsChecked="{Binding IsSelected, RelativeSource={RelativeSource AncestorType=DataGridRow}}" />
+                    </DataTemplate>
+                </DataGrid.RowHeaderTemplate>
+                <DataGrid.Columns>
+                    <DataGridTextColumn
+                        MinWidth="50"
+                        Binding="{Binding Order}"
+                        CanUserResize="False"
+                        Header="序号"
+                        IsReadOnly="True" />
+
+                    <DataGridTextColumn
+                        MinWidth="100"
+                        Binding="{Binding ProjectName}"
+                        Header="工程名称" />
+                    <DataGridTextColumn
+                        MinWidth="100"
+                        Binding="{Binding ProjectType}"
+                        CanUserResize="False"
+                        Header="归属功能" />
+                    <DataGridTextColumn
+                        MinWidth="100"
+                        Binding="{Binding UpdateTime}"
+                        Header="日期" />
+                </DataGrid.Columns>
+            </DataGrid>
+            <!--  操作  -->
+            <StackPanel
+                Grid.Row="3"
+                Margin="0,10,0,5"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Orientation="Horizontal">
+                <Button Content="删除工程" Style="{StaticResource ButtonDanger}" />
+                <Button
+                    Margin="10,0,0,0"
+                    Content="打开工程"
+                    Style="{StaticResource ButtonSuccess}" />
+                <Button
+                    Margin="10,0,0,0"
+                    Content="导入工程"
+                    Style="{StaticResource ButtonSuccess}" />
+                <Button
+                    Margin="10,0,0,0"
+                    Content="导出工程"
+                    Style="{StaticResource ButtonSuccess}" />
+            </StackPanel>
+        </Grid>
     </hc:TransitioningContentControl>
 </Page>

@@ -98,6 +98,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\AboutUsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\IndexPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -168,12 +172,16 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\IndexProjectInfoListItem.cs" />
     <Compile Include="Models\SigMakerResInfo.cs" />
     <Compile Include="Pages\CommonSignalOperatorPage.xaml.cs">
       <DependentUpon>CommonSignalOperatorPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\FeedBackPage.xaml.cs">
       <DependentUpon>FeedBackPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AboutUsPage.xaml.cs">
+      <DependentUpon>AboutUsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\IndexPage.xaml.cs">
       <DependentUpon>IndexPage.xaml</DependentUpon>
