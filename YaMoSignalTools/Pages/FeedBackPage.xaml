@@ -81,9 +81,18 @@
                     BorderThickness="0"
                     FontSize="13"
                     Header="反馈类型">
-                    <StackPanel Margin="5,6,5,2" Orientation="Horizontal">
-                        <RadioButton Content="困惑与建议" />
-                        <RadioButton Margin="10,0,0,0" Content="BUG缺陷" />
+                    <StackPanel
+                        x:Name="FeedBackType"
+                        Margin="5,6,5,2"
+                        Orientation="Horizontal">
+                        <RadioButton
+                            Content="反馈与建议"
+                            GroupName="Type_FeedBack"
+                            IsChecked="True" />
+                        <RadioButton
+                            Margin="10,0,0,0"
+                            Content="BUG缺陷"
+                            GroupName="Type_FeedBack" />
                     </StackPanel>
                 </GroupBox>
                 <GroupBox
@@ -93,13 +102,34 @@
                     BorderThickness="0"
                     FontSize="13"
                     Header="反馈模块">
-                    <StackPanel Margin="5,6,5,2" Orientation="Horizontal">
-                        <RadioButton Content="注册登录" />
-                        <RadioButton Margin="10,0,0,0" Content="UI设计" />
-                        <RadioButton Margin="10,0,0,0" Content="信号生成器" />
-                        <RadioButton Margin="10,0,0,0" Content="信号变换器" />
-                        <RadioButton Margin="10,0,0,0" Content="信号滤波器" />
-                        <RadioButton Margin="10,0,0,0" Content="通用处理单元" />
+                    <StackPanel
+                        x:Name="FeedBackModule"
+                        Margin="5,6,5,2"
+                        Orientation="Horizontal">
+                        <RadioButton
+                            Content="注册登录"
+                            GroupName="Module_FeedBack"
+                            IsChecked="True" />
+                        <RadioButton
+                            Margin="10,0,0,0"
+                            Content="UI设计"
+                            GroupName="Module_FeedBack" />
+                        <RadioButton
+                            Margin="10,0,0,0"
+                            Content="信号生成器"
+                            GroupName="Module_FeedBack" />
+                        <RadioButton
+                            Margin="10,0,0,0"
+                            Content="信号变换器"
+                            GroupName="Module_FeedBack" />
+                        <RadioButton
+                            Margin="10,0,0,0"
+                            Content="信号滤波器"
+                            GroupName="Module_FeedBack" />
+                        <RadioButton
+                            Margin="10,0,0,0"
+                            Content="通用处理单元"
+                            GroupName="Module_FeedBack" />
                     </StackPanel>
                 </GroupBox>
                 <GroupBox
@@ -116,6 +146,7 @@
                             Foreground="#666B76"
                             Text="hi~YaMo正在聆听，请提供详细使用场景，帮助我们理解~" />
                         <TextBox
+                            x:Name="txt_content"
                             Height="70"
                             Padding="2"
                             HorizontalContentAlignment="Left"
