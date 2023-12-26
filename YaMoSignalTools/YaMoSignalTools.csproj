@@ -259,6 +259,7 @@
     <Folder Include="Extensions\SignalFilterTools\" />
     <Folder Include="Extensions\SignalMakerTools\" />
     <Folder Include="Extensions\SignalTransferTools\" />
+    <Folder Include="Pages\SettingPage\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
